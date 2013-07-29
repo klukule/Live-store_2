@@ -1,13 +1,5 @@
-MetroFramework - WinForms on steroids.
+Live-store
 --------------------------------------
-
-Brings the new Modern UI alias Metro UI of Windows 8 to .NET Windows Forms applications. 
-
-Install via NuGet 
-------------------
-    Install-Package ModernUI
-
-Link: http://nuget.org/packages/ModernUI/
 
 Supported platforms
 -------------------
@@ -18,31 +10,7 @@ Supported platforms
 
 Requirements
 ------------
-* .NET Framework 2.0 and above.
-
-Controls supported
-------------------
-* Button
-* ComboBox
-* Checkbox
-* RadioButton
-* Toggle
-* Label
-* Link
-* Panel
-* ScrollBar
-* MetroTile
-* ProgressBar
-* ProgressSpinner
-* TabControl
-* TrackBar
-* Custom User Control
-
-Components supported
-------------------
-* StyleExtender (Apply theme propertys to none framework controls)
-* StyleManager (Auto inherit a default style to all used controls)
-* ToolTip
+* .NET Framework 4.5 and above.
 
 Screenshots
 ----------
@@ -63,9 +31,7 @@ Screenshots
 License
 -------
 
-The MIT License (MIT)
-
-Copyright (c) 2011 Sven Walter, http://github.com/viperneo
+Copyright (c) 2013 Lukáš (klukule) Jech
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of 
 this software and associated documentation files (the "Software"), to deal in the 
