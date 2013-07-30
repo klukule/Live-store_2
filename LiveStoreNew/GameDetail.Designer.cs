@@ -28,46 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.popisek = new MetroFramework.Controls.MetroTextBox();
+            this.image = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.image)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // popisek
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "label1";
+            this.popisek.Location = new System.Drawing.Point(23, 269);
+            this.popisek.MaxLength = 32767;
+            this.popisek.Multiline = true;
+            this.popisek.Name = "popisek";
+            this.popisek.PasswordChar = '\0';
+            this.popisek.ReadOnly = true;
+            this.popisek.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.popisek.SelectedText = "";
+            this.popisek.Size = new System.Drawing.Size(650, 132);
+            this.popisek.TabIndex = 0;
+            this.popisek.Text = "metroTextBox1";
+            this.popisek.UseSelectable = true;
             // 
-            // label2
+            // image
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(86, 124);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "WORKING ON IT :D";
+            this.image.Location = new System.Drawing.Point(23, 63);
+            this.image.Name = "image";
+            this.image.Size = new System.Drawing.Size(650, 200);
+            this.image.TabIndex = 1;
+            this.image.TabStop = false;
             // 
             // GameDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(696, 424);
+            this.Controls.Add(this.image);
+            this.Controls.Add(this.popisek);
+            this.MaximizeBox = false;
             this.Name = "GameDetail";
-            this.Text = "GameDetail";
+            this.Resizable = false;
+            this.Text = "Detail of game - ";
             this.Load += new System.EventHandler(this.GameDetail_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.image)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private MetroFramework.Controls.MetroTextBox popisek;
+        private System.Windows.Forms.PictureBox image;
+
     }
 }

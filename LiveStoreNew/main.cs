@@ -56,6 +56,26 @@ namespace LiveStoreNew
         
         }
 
+        public void doLoadGameData(string clickedid)
+        {
+            //MessageBox.Show("" + clickedid + "");
+            string url = "http://" + Data.IP + "/loaddata.php?id=" + clickedid + "";
+            string response = Util.HTTPRequest(url);
+            if (response != "")
+            {
+                string name = Util.ParseBetween(response, "<name>", "</name>");
+                string image_url = Util.ParseBetween(response, "<img_url>", "</img_url>");
+                string[] data = Util.GetStringInBetween("<data>", "</data>", response, false, false);
+                data[0] = data[0].Replace("//", "\r\n");
+                if (!string.IsNullOrEmpty(data[0]))
+                {
+                    GameDetail form2 = new GameDetail(name, data[0], image_url);
+                    form2.ShowDialog();
+                    form2.Activate();
+
+                }
+            }
+        }
         public void doLoad()
         {
             string url = "http://" + Data.IP + "/gamelibrary.php";
@@ -136,6 +156,7 @@ namespace LiveStoreNew
         {
             
             LoginPanelStatus();
+            
            
         }
 
@@ -148,30 +169,12 @@ namespace LiveStoreNew
         {
             doLogin();
         }
-        public void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e, string clickedid)
-        {
-            string url = "http://" + Data.IP + "/loaddata.php?id=" + clickedid + "";
-            string response = Util.HTTPRequest(url);
-            if (response != "")
-            {
-                string name = Util.ParseBetween(response, "<name>", "</name>");
-                string image_url = Util.ParseBetween(response, "<image_url>", "</image_url>");
-                string[] data = Util.GetStringInBetween("<data>", "</data>", response, false, false);
-                data[0] = data[0].Replace("//", "\r\n");
-                if (!string.IsNullOrEmpty(data[0]))
-                {
-                    GameDetail form2 = new GameDetail(name, data[0], image_url);
-                    form2.ShowDialog();
-                    form2.Activate();
-
-                }
-            }
-        }
 
         private void game1_Click(object sender, EventArgs e)
         {
-            //backgroundWorker1.RunWorkerAsync(game1);
-            MessageBox.Show("WORKING ON IT :D");
+            string clickedid = "game1";
+            doLoadGameData(clickedid);
+            //MessageBox.Show("WORKING ON IT :D");
         }
 
         private void button_register_Click(object sender, EventArgs e)

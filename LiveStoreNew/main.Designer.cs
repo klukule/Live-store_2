@@ -50,7 +50,6 @@
             this.UserName = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.useravatar = new System.Windows.Forms.PictureBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.LoginPanel = new System.Windows.Forms.Panel();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
@@ -417,7 +416,6 @@
         private System.Windows.Forms.Panel mainpanel;
         private System.Windows.Forms.Panel logindatapanel;
         private System.Windows.Forms.PictureBox useravatar;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.PictureBox game1;
         private System.Windows.Forms.PictureBox game10;
         private System.Windows.Forms.PictureBox game9;

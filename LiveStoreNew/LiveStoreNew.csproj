@@ -90,10 +90,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MetroFramework.Demo\MetroFramework.Demo.csproj">
-      <Project>{af988819-4618-4852-9506-c1d06d04f6b2}</Project>
-      <Name>MetroFramework.Demo</Name>
-    </ProjectReference>
     <ProjectReference Include="..\MetroFramework.Design\MetroFramework.Design.csproj">
       <Project>{7316584d-9a16-4280-a8ab-6d45198c6e4d}</Project>
       <Name>MetroFramework.Design</Name>
